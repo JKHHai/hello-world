@@ -1,0 +1,3 @@
+make: Entering directory '/home/justinhai/Desktop/SummerResearch2018/CGRAframework/cgra-me-uoft/benchmarks/microbench/sum2'
+make: Nothing to be done for 'prepare_run'.
+make: Leaving directory '/home/justinhai/Desktop/SummerResearch2018/CGRAframework/cgra-me-uoft/benchmarks/microbench/sum2'

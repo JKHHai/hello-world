@@ -1,0 +1,288 @@
+make: Entering directory '/home/justinhai/Desktop/SummerResearch2018/CGRAframework/cgra-me-uoft/benchmarks/microbench/sum2'
+'cgrame'  --cpp 3 --arch-opts 'cols=4 rows=4' -g graph_loop.dot
+
+CGRA - Modelling and Exploration Version 1.0 (http://cgra-me.ece.utoronto.ca/)
+Copyright (c) 2015-2018 University of Toronto. All Rights Reserved.
+For research and academic purposes only. Commercial use is prohibited.
+Please email questions to: Xander Chin(xan@ece.utoronto.ca)
+Compiled: May 16 2018 17:25:18
+
+[INFO] Creating Architecture #3 from C++...
+[INFO] Architecture Name: HyCUBE CGRA Architecture
+[INFO] Overwritting C++ Architecture Parameter: cols to 4 (Default: 4)
+[INFO] Overwritting C++ Architecture Parameter: rows to 4 (Default: 4)
+[INFO] Creating "HyCUBE CGRA Architecture" Architecture from C++...
+[INFO] Parsing DFG...
+[INFO] Creating Mapper...
+[INFO] Gurobi ILP Solver Specified
+[INFO] Mapping DFG Onto CGRA Architecture...
+Optimize a model with 5882 rows, 3680 columns and 14072 nonzeros
+Variable types: 0 continuous, 3680 integer (3680 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 4960 rows and 2576 columns
+Presolve time: 0.02s
+Presolved: 922 rows, 1104 columns, 3376 nonzeros
+Variable types: 0 continuous, 1104 integer (1104 binary)
+Found heuristic solution: objective 234.0000000
+
+Explored 0 nodes (0 simplex iterations) in 0.02 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 1: 234 
+Pool objective bound 0
+
+Solution limit reached
+Best objective 2.340000000000e+02, best bound 0.000000000000e+00, gap 100.0000%
+Gurobi Runtime: 0.0248141
+[INFO] Suboptimal CGRA Mapping Found
+MapperTimeout: 0
+Mapped: 1
+
+Operation Mapping Result:
+add0(add): 0:pe_c0_r0.ALU.fu
+const1(const): 0:pe_c0_r1.ALU.fu
+
+Connection Mapping Result:
+add0_val_output:
+  0:pe_c0_r0.ALU.in_a
+  0:pe_c0_r0.ALU.m_out
+  0:pe_c0_r0.ALU.out
+  0:pe_c0_r0.RES.in
+  0:pe_c0_r0.RES.out
+  0:pe_c0_r0.RES.reg
+  0:pe_c0_r0.crossbar.in5
+  0:pe_c0_r0.crossbar.mux4.in5
+  0:pe_c0_r0.crossbar.mux4.mux
+  0:pe_c0_r0.crossbar.mux4.out
+  0:pe_c0_r0.crossbar.out4
+  0:pe_c0_r0.rega.in
+  0:pe_c0_r0.rega.out
+  0:pe_c0_r0.rega.reg
+  0:pe_c0_r2.ALU.in_b
+  0:pe_c0_r2.ALU.m_in_b
+  0:pe_c0_r2.ALU.out
+  0:pe_c0_r2.RES.in
+  0:pe_c0_r2.RES.out
+  0:pe_c0_r2.RES.reg
+  0:pe_c0_r2.crossbar.in5
+  0:pe_c0_r2.crossbar.mux5.in5
+  0:pe_c0_r2.crossbar.mux5.mux
+  0:pe_c0_r2.crossbar.mux5.out
+  0:pe_c0_r2.crossbar.out5
+  0:pe_c0_r2.regb.in
+  0:pe_c0_r2.regb.out
+  0:pe_c0_r2.regb.reg
+  0:pe_c0_r3.ALU.in_b
+  0:pe_c0_r3.ALU.m_in_b
+  0:pe_c0_r3.ALU.out
+  0:pe_c0_r3.RES.in
+  0:pe_c0_r3.RES.out
+  0:pe_c0_r3.RES.reg
+  0:pe_c0_r3.crossbar.in5
+  0:pe_c0_r3.crossbar.mux5.in5
+  0:pe_c0_r3.crossbar.mux5.mux
+  0:pe_c0_r3.crossbar.mux5.out
+  0:pe_c0_r3.crossbar.out5
+  0:pe_c0_r3.regb.in
+  0:pe_c0_r3.regb.out
+  0:pe_c0_r3.regb.reg
+  0:pe_c1_r0.ALU.in_b
+  0:pe_c1_r0.ALU.m_in_b
+  0:pe_c1_r0.ALU.out
+  0:pe_c1_r0.RES.in
+  0:pe_c1_r0.RES.out
+  0:pe_c1_r0.RES.reg
+  0:pe_c1_r0.crossbar.in5
+  0:pe_c1_r0.crossbar.mux5.in5
+  0:pe_c1_r0.crossbar.mux5.mux
+  0:pe_c1_r0.crossbar.mux5.out
+  0:pe_c1_r0.crossbar.out5
+  0:pe_c1_r0.regb.in
+  0:pe_c1_r0.regb.out
+  0:pe_c1_r0.regb.reg
+  0:pe_c1_r1.ALU.in_b
+  0:pe_c1_r1.ALU.m_in_b
+  0:pe_c1_r1.ALU.out
+  0:pe_c1_r1.RES.in
+  0:pe_c1_r1.RES.out
+  0:pe_c1_r1.RES.reg
+  0:pe_c1_r1.crossbar.in5
+  0:pe_c1_r1.crossbar.mux5.in5
+  0:pe_c1_r1.crossbar.mux5.mux
+  0:pe_c1_r1.crossbar.mux5.out
+  0:pe_c1_r1.crossbar.out5
+  0:pe_c1_r1.regb.in
+  0:pe_c1_r1.regb.out
+  0:pe_c1_r1.regb.reg
+  0:pe_c1_r2.ALU.in_b
+  0:pe_c1_r2.ALU.m_in_b
+  0:pe_c1_r2.ALU.out
+  0:pe_c1_r2.RES.in
+  0:pe_c1_r2.RES.out
+  0:pe_c1_r2.RES.reg
+  0:pe_c1_r2.crossbar.in5
+  0:pe_c1_r2.crossbar.mux5.in5
+  0:pe_c1_r2.crossbar.mux5.mux
+  0:pe_c1_r2.crossbar.mux5.out
+  0:pe_c1_r2.crossbar.out5
+  0:pe_c1_r2.regb.in
+  0:pe_c1_r2.regb.out
+  0:pe_c1_r2.regb.reg
+  0:pe_c1_r3.ALU.in_b
+  0:pe_c1_r3.ALU.m_in_b
+  0:pe_c1_r3.ALU.out
+  0:pe_c1_r3.RES.in
+  0:pe_c1_r3.RES.out
+  0:pe_c1_r3.RES.reg
+  0:pe_c1_r3.crossbar.in5
+  0:pe_c1_r3.crossbar.mux5.in5
+  0:pe_c1_r3.crossbar.mux5.mux
+  0:pe_c1_r3.crossbar.mux5.out
+  0:pe_c1_r3.crossbar.out5
+  0:pe_c1_r3.regb.in
+  0:pe_c1_r3.regb.out
+  0:pe_c1_r3.regb.reg
+  0:pe_c2_r0.ALU.in_b
+  0:pe_c2_r0.ALU.m_in_b
+  0:pe_c2_r0.ALU.out
+  0:pe_c2_r0.RES.in
+  0:pe_c2_r0.RES.out
+  0:pe_c2_r0.RES.reg
+  0:pe_c2_r0.crossbar.in5
+  0:pe_c2_r0.crossbar.mux5.in5
+  0:pe_c2_r0.crossbar.mux5.mux
+  0:pe_c2_r0.crossbar.mux5.out
+  0:pe_c2_r0.crossbar.out5
+  0:pe_c2_r0.regb.in
+  0:pe_c2_r0.regb.out
+  0:pe_c2_r0.regb.reg
+  0:pe_c2_r1.ALU.in_b
+  0:pe_c2_r1.ALU.m_in_b
+  0:pe_c2_r1.ALU.out
+  0:pe_c2_r1.RES.in
+  0:pe_c2_r1.RES.out
+  0:pe_c2_r1.RES.reg
+  0:pe_c2_r1.crossbar.in5
+  0:pe_c2_r1.crossbar.mux5.in5
+  0:pe_c2_r1.crossbar.mux5.mux
+  0:pe_c2_r1.crossbar.mux5.out
+  0:pe_c2_r1.crossbar.out5
+  0:pe_c2_r1.regb.in
+  0:pe_c2_r1.regb.out
+  0:pe_c2_r1.regb.reg
+  0:pe_c2_r2.ALU.in_b
+  0:pe_c2_r2.ALU.m_in_b
+  0:pe_c2_r2.ALU.out
+  0:pe_c2_r2.RES.in
+  0:pe_c2_r2.RES.out
+  0:pe_c2_r2.RES.reg
+  0:pe_c2_r2.crossbar.in5
+  0:pe_c2_r2.crossbar.mux5.in5
+  0:pe_c2_r2.crossbar.mux5.mux
+  0:pe_c2_r2.crossbar.mux5.out
+  0:pe_c2_r2.crossbar.out5
+  0:pe_c2_r2.regb.in
+  0:pe_c2_r2.regb.out
+  0:pe_c2_r2.regb.reg
+  0:pe_c2_r3.ALU.in_b
+  0:pe_c2_r3.ALU.m_in_b
+  0:pe_c2_r3.ALU.out
+  0:pe_c2_r3.RES.in
+  0:pe_c2_r3.RES.out
+  0:pe_c2_r3.RES.reg
+  0:pe_c2_r3.crossbar.in5
+  0:pe_c2_r3.crossbar.mux5.in5
+  0:pe_c2_r3.crossbar.mux5.mux
+  0:pe_c2_r3.crossbar.mux5.out
+  0:pe_c2_r3.crossbar.out5
+  0:pe_c2_r3.regb.in
+  0:pe_c2_r3.regb.out
+  0:pe_c2_r3.regb.reg
+  0:pe_c3_r0.ALU.in_b
+  0:pe_c3_r0.ALU.m_in_b
+  0:pe_c3_r0.ALU.out
+  0:pe_c3_r0.RES.in
+  0:pe_c3_r0.RES.out
+  0:pe_c3_r0.RES.reg
+  0:pe_c3_r0.crossbar.in5
+  0:pe_c3_r0.crossbar.mux5.in5
+  0:pe_c3_r0.crossbar.mux5.mux
+  0:pe_c3_r0.crossbar.mux5.out
+  0:pe_c3_r0.crossbar.out5
+  0:pe_c3_r0.regb.in
+  0:pe_c3_r0.regb.out
+  0:pe_c3_r0.regb.reg
+  0:pe_c3_r1.ALU.in_b
+  0:pe_c3_r1.ALU.m_in_b
+  0:pe_c3_r1.ALU.out
+  0:pe_c3_r1.RES.in
+  0:pe_c3_r1.RES.out
+  0:pe_c3_r1.RES.reg
+  0:pe_c3_r1.crossbar.in5
+  0:pe_c3_r1.crossbar.mux5.in5
+  0:pe_c3_r1.crossbar.mux5.mux
+  0:pe_c3_r1.crossbar.mux5.out
+  0:pe_c3_r1.crossbar.out5
+  0:pe_c3_r1.regb.in
+  0:pe_c3_r1.regb.out
+  0:pe_c3_r1.regb.reg
+  0:pe_c3_r2.ALU.in_b
+  0:pe_c3_r2.ALU.m_in_b
+  0:pe_c3_r2.ALU.out
+  0:pe_c3_r2.RES.in
+  0:pe_c3_r2.RES.out
+  0:pe_c3_r2.RES.reg
+  0:pe_c3_r2.crossbar.in5
+  0:pe_c3_r2.crossbar.mux5.in5
+  0:pe_c3_r2.crossbar.mux5.mux
+  0:pe_c3_r2.crossbar.mux5.out
+  0:pe_c3_r2.crossbar.out5
+  0:pe_c3_r2.regb.in
+  0:pe_c3_r2.regb.out
+  0:pe_c3_r2.regb.reg
+  0:pe_c3_r3.ALU.in_b
+  0:pe_c3_r3.ALU.m_in_b
+  0:pe_c3_r3.ALU.out
+  0:pe_c3_r3.RES.in
+  0:pe_c3_r3.RES.out
+  0:pe_c3_r3.RES.reg
+  0:pe_c3_r3.crossbar.in5
+  0:pe_c3_r3.crossbar.mux5.in5
+  0:pe_c3_r3.crossbar.mux5.mux
+  0:pe_c3_r3.crossbar.mux5.out
+  0:pe_c3_r3.crossbar.out5
+  0:pe_c3_r3.regb.in
+  0:pe_c3_r3.regb.out
+  0:pe_c3_r3.regb.reg
+
+const1_val_output:
+  0:pe_c0_r0.ALU.in_b
+  0:pe_c0_r0.crossbar.in3
+  0:pe_c0_r0.crossbar.mux5.in3
+  0:pe_c0_r0.crossbar.mux5.mux
+  0:pe_c0_r0.crossbar.mux5.out
+  0:pe_c0_r0.crossbar.out5
+  0:pe_c0_r0.in3
+  0:pe_c0_r0.mux3.in0
+  0:pe_c0_r0.mux3.mux
+  0:pe_c0_r0.mux3.out
+  0:pe_c0_r0.regb.in
+  0:pe_c0_r0.regb.out
+  0:pe_c0_r0.regb.reg
+  0:pe_c0_r1.ALU.m_out
+  0:pe_c0_r1.ALU.out
+  0:pe_c0_r1.RES.in
+  0:pe_c0_r1.RES.out
+  0:pe_c0_r1.RES.reg
+  0:pe_c0_r1.crossbar.in5
+  0:pe_c0_r1.crossbar.mux0.in5
+  0:pe_c0_r1.crossbar.mux0.mux
+  0:pe_c0_r1.crossbar.mux0.out
+  0:pe_c0_r1.crossbar.out0
+  0:pe_c0_r1.out0
+
+make: Leaving directory '/home/justinhai/Desktop/SummerResearch2018/CGRAframework/cgra-me-uoft/benchmarks/microbench/sum2'

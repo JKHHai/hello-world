@@ -1,0 +1,87 @@
+make: Entering directory '/home/justinhai/Desktop/SummerResearch2018/CGRAframework/cgra-me-uoft/benchmarks/microbench/sum2'
+'cgrame' --II 2 --cpp 3 --arch-opts 'cols=4 rows=4' -g graph_loop.dot
+
+CGRA - Modelling and Exploration Version 1.0 (http://cgra-me.ece.utoronto.ca/)
+Copyright (c) 2015-2018 University of Toronto. All Rights Reserved.
+For research and academic purposes only. Commercial use is prohibited.
+Please email questions to: Xander Chin(xan@ece.utoronto.ca)
+Compiled: May 16 2018 17:25:18
+
+[INFO] Creating Architecture #3 from C++...
+[INFO] Architecture Name: HyCUBE CGRA Architecture
+[INFO] Overwritting C++ Architecture Parameter: cols to 4 (Default: 4)
+[INFO] Overwritting C++ Architecture Parameter: rows to 4 (Default: 4)
+[INFO] Creating "HyCUBE CGRA Architecture" Architecture from C++...
+[INFO] Parsing DFG...
+[INFO] Creating Mapper...
+[INFO] Gurobi ILP Solver Specified
+[INFO] Mapping DFG Onto CGRA Architecture...
+Optimize a model with 13554 rows, 8256 columns and 32624 nonzeros
+Variable types: 0 continuous, 8256 integer (8256 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 10288 rows and 4416 columns
+Presolve time: 0.04s
+Presolved: 3266 rows, 3840 columns, 11808 nonzeros
+Variable types: 0 continuous, 3840 integer (3840 binary)
+
+Root relaxation: objective 2.400000e+01, 1115 iterations, 0.07 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   24.00000    0   24          -   24.00000      -     -    0s
+H    0     0                      26.0000000   24.00000  7.69%     -    0s
+
+Explored 0 nodes (1184 simplex iterations) in 0.14 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 1: 26 
+Pool objective bound 24
+
+Optimal solution found (tolerance 2.00e-01)
+Best objective 2.600000000000e+01, best bound 2.400000000000e+01, gap 7.6923%
+Gurobi Runtime: 0.144161
+[INFO] Optimal CGRA Mapping Found
+MapperTimeout: 0
+Mapped: 1
+
+Operation Mapping Result:
+add0(add): 0:pe_c2_r3.ALU.fu
+const1(const): 1:pe_c2_r3.ALU.fu
+
+Connection Mapping Result:
+add0_val_output:
+  0:pe_c2_r3.ALU.in_a
+  0:pe_c2_r3.ALU.m_out
+  0:pe_c2_r3.ALU.out
+  0:pe_c2_r3.crossbar.in4
+  0:pe_c2_r3.crossbar.mux4.in4
+  0:pe_c2_r3.crossbar.mux4.mux
+  0:pe_c2_r3.crossbar.mux4.out
+  0:pe_c2_r3.crossbar.out4
+  0:pe_c2_r3.rega.in
+  0:pe_c2_r3.rega.m_out
+  0:pe_c2_r3.rega.out
+  0:pe_c2_r3.rega.reg
+  1:pe_c2_r3.rega.m_reg
+  1:pe_c2_r3.rega.out
+
+const1_val_output:
+  0:pe_c2_r3.ALU.in_b
+  0:pe_c2_r3.regb.m_reg
+  0:pe_c2_r3.regb.out
+  1:pe_c2_r3.ALU.m_out
+  1:pe_c2_r3.ALU.out
+  1:pe_c2_r3.crossbar.in4
+  1:pe_c2_r3.crossbar.mux5.in4
+  1:pe_c2_r3.crossbar.mux5.mux
+  1:pe_c2_r3.crossbar.mux5.out
+  1:pe_c2_r3.crossbar.out5
+  1:pe_c2_r3.regb.in
+  1:pe_c2_r3.regb.reg
+
+make: Leaving directory '/home/justinhai/Desktop/SummerResearch2018/CGRAframework/cgra-me-uoft/benchmarks/microbench/sum2'

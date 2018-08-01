@@ -1,0 +1,3 @@
+'mapper timeout' : ['0', '0']
+'solver' : ['Gurobi ILP', 'Gurobi ILP']
+'presolve time' : ['0.20s', '0.20s']

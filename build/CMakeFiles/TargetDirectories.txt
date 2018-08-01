@@ -1,0 +1,3 @@
+/home/justinhai/Desktop/SummerResearch2018/Testing/build/CMakeFiles/edit_cache.dir
+/home/justinhai/Desktop/SummerResearch2018/Testing/build/CMakeFiles/rebuild_cache.dir
+/home/justinhai/Desktop/SummerResearch2018/Testing/build/CMakeFiles/hello.dir

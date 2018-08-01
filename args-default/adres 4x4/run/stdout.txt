@@ -1,0 +1,72 @@
+make: Entering directory '/home/justinhai/Desktop/SummerResearch2018/CGRAframework/cgra-me-uoft/benchmarks/microbench/sum2'
+'cgrame'  --cpp 2 --arch-opts 'cols=4 rows=4' -g graph_loop.dot
+
+CGRA - Modelling and Exploration Version 1.0 (http://cgra-me.ece.utoronto.ca/)
+Copyright (c) 2015-2018 University of Toronto. All Rights Reserved.
+For research and academic purposes only. Commercial use is prohibited.
+Please email questions to: Xander Chin(xan@ece.utoronto.ca)
+Compiled: May 16 2018 17:25:18
+
+[INFO] Creating Architecture #2 from C++...
+[INFO] Architecture Name: Adres CGRA Architecture
+[INFO] Overwritting C++ Architecture Parameter: cols to 4 (Default: 4)
+[INFO] Overwritting C++ Architecture Parameter: rows to 4 (Default: 4)
+[INFO] Creating "Adres CGRA Architecture" Architecture from C++...
+[INFO] Parsing DFG...
+[INFO] Creating Mapper...
+[INFO] Gurobi ILP Solver Specified
+[INFO] Mapping DFG Onto CGRA Architecture...
+Optimize a model with 3906 rows, 2368 columns and 9692 nonzeros
+Variable types: 0 continuous, 2368 integer (2368 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 2848 rows and 1200 columns
+Presolve time: 0.01s
+Presolved: 1058 rows, 1168 columns, 3656 nonzeros
+Variable types: 0 continuous, 1168 integer (1168 binary)
+Found heuristic solution: objective 18.0000000
+
+Explored 0 nodes (0 simplex iterations) in 0.02 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 1: 18 
+Pool objective bound -144
+
+Solution limit reached
+Best objective 1.800000000000e+01, best bound -1.440000000000e+02, gap 900.0000%
+Gurobi Runtime: 0.0184851
+[INFO] Suboptimal CGRA Mapping Found
+MapperTimeout: 0
+Mapped: 1
+
+Operation Mapping Result:
+add0(add): 0:pe_c3_r3.func.fu
+const1(const): 0:pe_c3_r3.const.const
+
+Connection Mapping Result:
+add0_val_output:
+  0:pe_c3_r3.fu_to_rf
+  0:pe_c3_r3.func.in_a
+  0:pe_c3_r3.func.m_out
+  0:pe_c3_r3.func.out
+  0:pe_c3_r3.mux_a.in6
+  0:pe_c3_r3.mux_a.mux
+  0:pe_c3_r3.mux_a.out
+  0:pe_c3_r3.rf_to_muxa
+  0:rf_c3_r3.in0
+  0:rf_c3_r3.out0
+  0:rf_c3_r3.out0_m0
+  0:rf_c3_r3.reg0
+  0:rf_c3_r3.reg0_m0
+
+const1_val_output:
+  0:pe_c3_r3.const.out
+  0:pe_c3_r3.func.in_b
+  0:pe_c3_r3.mux_b.in5
+  0:pe_c3_r3.mux_b.mux
+  0:pe_c3_r3.mux_b.out
+
+make: Leaving directory '/home/justinhai/Desktop/SummerResearch2018/CGRAframework/cgra-me-uoft/benchmarks/microbench/sum2'

@@ -1,0 +1,25 @@
+<!-- Test Architecture, containing a 7x6 array -->
+<!-- First Row is devoted to Large RF, next is I/O, then Memory Ports and PE's -->
+
+-<architecture rows="6" cols="4">
+	<!--add global Register File -->
+	-<pattern row-range="0 0" col-range="0 3">
+		<block module="globalRF"/>
+	 </pattern>
+	
+	<!--add I/O's -->
+	-<pattern row-range="1 1" col-range="0 3">
+		<block module="IO"/>
+	 </pattern>
+
+	<!--add connections between I/O and GlobalRF -->
+	-<pattern row-range="1 1" col-range="0 3" counter="i">
+		<connection from="(rel 0 0).out" to="(rel -1 -(i)).in(i)">
+	 </pattern>	
+	
+	<!--add IO ports -->
+	-<pattern row-range="1 1" col-range="0 3" counter="i">
+		<inout name = "bidir(i)"/>
+		<connection from="this.bidir(i)" to="(rel 0 0).bidir"/>
+	 </pattern>
+ </architecture> 

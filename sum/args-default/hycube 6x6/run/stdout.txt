@@ -1,0 +1,42 @@
+make: Entering directory '/home/justinhai/Desktop/SummerResearch2018/CGRAframework/cgra-me-uoft/benchmarks/microbench/sum'
+'cgrame'  --cpp 3 --arch-opts 'cols=6 rows=6' -g graph_loop.dot
+
+CGRA - Modelling and Exploration Version 1.0 (http://cgra-me.ece.utoronto.ca/)
+Copyright (c) 2015-2018 University of Toronto. All Rights Reserved.
+For research and academic purposes only. Commercial use is prohibited.
+Please email questions to: Xander Chin(xan@ece.utoronto.ca)
+Compiled: May 16 2018 17:25:18
+
+[INFO] Creating Architecture #3 from C++...
+[INFO] Architecture Name: HyCUBE CGRA Architecture
+[INFO] Overwritting C++ Architecture Parameter: cols to 6 (Default: 4)
+[INFO] Overwritting C++ Architecture Parameter: rows to 6 (Default: 4)
+[INFO] Creating "HyCUBE CGRA Architecture" Architecture from C++...
+[INFO] Parsing DFG...
+[INFO] Creating Mapper...
+[INFO] Gurobi ILP Solver Specified
+[INFO] Mapping DFG Onto CGRA Architecture...
+Optimize a model with 55669 rows, 40914 columns and 145974 nonzeros
+Variable types: 0 continuous, 40914 integer (40914 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 774 rows and 1002 columns
+Presolve time: 0.02s
+
+Explored 0 nodes (0 simplex iterations) in 0.06 seconds
+Thread count was 1 (of 4 available processors)
+
+Solution count 0
+Pool objective bound 1e+100
+
+Model is infeasible
+Best objective -, best bound -, gap -
+Gurobi Runtime: 0.0579951
+[INFO] CGRA Mapping Infeasible
+MapperTimeout: 0
+Mapped: 0
+../../rules.mk:45: recipe for target 'run_mapper' failed
+make: Leaving directory '/home/justinhai/Desktop/SummerResearch2018/CGRAframework/cgra-me-uoft/benchmarks/microbench/sum'
